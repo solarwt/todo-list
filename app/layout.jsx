@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Todo Reminder',
+  title: '多一事不如少一事',
   description: '一个清爽专业的 Next.js 待办提醒工具。',
 }
 
