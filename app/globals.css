@@ -1,25 +1,25 @@
 :root {
-  --accent: #0b66d8;
-  --accent-strong: #064ca8;
-  --accent-soft: rgba(11, 102, 216, 0.12);
-  --background: #f4f8fd;
-  --border: #d7e2ef;
-  --border-strong: #9fb4cc;
-  --brand-red: #f0444c;
-  --danger: #d92d3c;
-  --danger-soft: #ffe8ea;
+  --accent: #b4232d;
+  --accent-strong: #7f111b;
+  --accent-soft: rgba(180, 35, 45, 0.12);
+  --background: #f7f4f4;
+  --border: #e5d8d8;
+  --border-strong: #b9a5a5;
+  --brand-red: #ef444f;
+  --danger: #b4232d;
+  --danger-soft: #fee6e8;
   --input: #ffffff;
-  --muted: #5b6b81;
-  --shadow: 0 20px 52px rgba(10, 38, 72, 0.08);
-  --shadow-strong: 0 24px 70px rgba(10, 38, 72, 0.2);
-  --soft: #edf4fb;
+  --muted: #696363;
+  --shadow: 0 20px 52px rgba(52, 18, 18, 0.08);
+  --shadow-strong: 0 24px 70px rgba(52, 18, 18, 0.2);
+  --soft: #f8eeee;
   --surface: #ffffff;
-  --surface-tinted: #f8fbff;
-  --text: #243247;
-  --text-strong: #101b2b;
-  --warning: #d58a00;
-  --warning-soft: #fff4db;
-  --warning-text: #8a5b00;
+  --surface-tinted: #fff8f8;
+  --text: #2e2a2a;
+  --text-strong: #161313;
+  --warning: #8f4c10;
+  --warning-soft: #fff1df;
+  --warning-text: #6f3a0c;
 
   color: var(--text);
   background: var(--background);
@@ -42,7 +42,7 @@ body {
   min-height: 100svh;
   margin: 0;
   background:
-    linear-gradient(180deg, #edf6ff 0%, var(--background) 34%, #f9fbfe 100%);
+    linear-gradient(180deg, #fff0f1 0%, var(--background) 34%, #fafafa 100%);
 }
 
 button,
@@ -92,7 +92,7 @@ a:focus-visible {
   content: "";
   display: block;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--brand-red) 100%);
+  background: linear-gradient(90deg, var(--accent-strong) 0%, var(--brand-red) 100%);
 }
 
 .workspace {
@@ -131,7 +131,7 @@ a:focus-visible {
   object-fit: cover;
   flex: 0 0 auto;
   background: #fff;
-  box-shadow: 0 10px 24px rgba(10, 38, 72, 0.16);
+  box-shadow: 0 10px 24px rgba(52, 18, 18, 0.16);
 }
 
 .eyebrow {
@@ -178,7 +178,7 @@ h3 {
   min-width: 108px;
   padding: 10px 12px;
   border-radius: 8px;
-  border: 1px solid #dbe8f6;
+  border: 1px solid #ecdada;
   background: var(--surface-tinted);
   color: var(--text-strong);
   font-size: 14px;
@@ -202,8 +202,8 @@ h3 {
   min-width: 0;
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid #dce8f5;
-  background: linear-gradient(180deg, #f7fbff 0%, #edf5fc 100%);
+  border: 1px solid #ecdada;
+  background: linear-gradient(180deg, #fff9f9 0%, #f8eeee 100%);
 }
 
 .stats-grid span {
@@ -278,7 +278,7 @@ button {
   background: var(--accent);
   color: #fff;
   font-weight: 800;
-  box-shadow: 0 12px 28px rgba(11, 102, 216, 0.24);
+  box-shadow: 0 12px 28px rgba(180, 35, 45, 0.24);
 }
 
 .task-panel {
@@ -295,7 +295,7 @@ button {
 
 .filters button,
 .task-actions button {
-  border: 1px solid #dce8f5;
+  border: 1px solid #ecdada;
   background: var(--surface-tinted);
   color: var(--text);
   font-size: 14px;
@@ -324,7 +324,7 @@ button {
 }
 
 .task-item.done {
-  background: #f7fafc;
+  background: #f8f8f8;
   opacity: 0.72;
 }
 
@@ -401,12 +401,12 @@ button {
 }
 
 .priority.low {
-  background: #e8f6ef;
-  color: #126b49;
+  background: #eeeeee;
+  color: #4a4a4a;
 }
 
 .priority.medium {
-  background: #e9f2ff;
+  background: #feeef0;
   color: var(--accent-strong);
 }
 
