@@ -1,22 +1,25 @@
 :root {
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.13);
-  --background: #f5f7fb;
-  --border: #dfe4ec;
-  --border-strong: #bcc7d6;
-  --danger: #d4423a;
-  --danger-soft: #ffe4e1;
+  --accent: #0b66d8;
+  --accent-strong: #064ca8;
+  --accent-soft: rgba(11, 102, 216, 0.12);
+  --background: #f4f8fd;
+  --border: #d7e2ef;
+  --border-strong: #9fb4cc;
+  --brand-red: #f0444c;
+  --danger: #d92d3c;
+  --danger-soft: #ffe8ea;
   --input: #ffffff;
-  --muted: #687386;
-  --shadow: 0 18px 45px rgba(18, 32, 61, 0.08);
-  --shadow-strong: 0 24px 70px rgba(18, 32, 61, 0.22);
-  --soft: #eef3f8;
+  --muted: #5b6b81;
+  --shadow: 0 20px 52px rgba(10, 38, 72, 0.08);
+  --shadow-strong: 0 24px 70px rgba(10, 38, 72, 0.2);
+  --soft: #edf4fb;
   --surface: #ffffff;
-  --text: #263142;
-  --text-strong: #101828;
-  --warning: #d99618;
-  --warning-soft: #fff3cf;
-  --warning-text: #8a5c05;
+  --surface-tinted: #f8fbff;
+  --text: #243247;
+  --text-strong: #101b2b;
+  --warning: #d58a00;
+  --warning-soft: #fff4db;
+  --warning-text: #8a5b00;
 
   color: var(--text);
   background: var(--background);
@@ -38,7 +41,8 @@ body {
   min-width: 320px;
   min-height: 100svh;
   margin: 0;
-  background: var(--background);
+  background:
+    linear-gradient(180deg, #edf6ff 0%, var(--background) 34%, #f9fbfe 100%);
 }
 
 button,
@@ -79,11 +83,21 @@ a:focus-visible {
 .workspace,
 .task-panel {
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.workspace::before,
+.task-panel::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--brand-red) 100%);
 }
 
 .workspace {
   align-self: start;
-  padding: 24px;
+  padding: 20px 24px 24px;
 }
 
 .app-header,
@@ -116,12 +130,13 @@ a:focus-visible {
   border-radius: 8px;
   object-fit: cover;
   flex: 0 0 auto;
-  box-shadow: 0 10px 24px rgba(18, 32, 61, 0.14);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(10, 38, 72, 0.16);
 }
 
 .eyebrow {
   margin: 0 0 6px;
-  color: var(--muted);
+  color: var(--accent-strong);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -142,8 +157,9 @@ h1 {
 }
 
 .brand-lockup h1 {
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: 28px;
+  font-weight: 850;
 }
 
 h2 {
@@ -162,7 +178,8 @@ h3 {
   min-width: 108px;
   padding: 10px 12px;
   border-radius: 8px;
-  background: var(--soft);
+  border: 1px solid #dbe8f6;
+  background: var(--surface-tinted);
   color: var(--text-strong);
   font-size: 14px;
   text-align: right;
@@ -185,11 +202,12 @@ h3 {
   min-width: 0;
   padding: 12px;
   border-radius: 8px;
-  background: var(--soft);
+  border: 1px solid #dce8f5;
+  background: linear-gradient(180deg, #f7fbff 0%, #edf5fc 100%);
 }
 
 .stats-grid span {
-  color: var(--text-strong);
+  color: var(--accent-strong);
   font-size: 24px;
   font-weight: 800;
 }
@@ -260,11 +278,12 @@ button {
   background: var(--accent);
   color: #fff;
   font-weight: 800;
+  box-shadow: 0 12px 28px rgba(11, 102, 216, 0.24);
 }
 
 .task-panel {
   min-height: calc(100svh - 64px);
-  padding: 24px;
+  padding: 20px 24px 24px;
 }
 
 .filters {
@@ -276,15 +295,17 @@ button {
 
 .filters button,
 .task-actions button {
-  background: var(--soft);
+  border: 1px solid #dce8f5;
+  background: var(--surface-tinted);
   color: var(--text);
   font-size: 14px;
   padding: 8px 11px;
 }
 
 .filters button.active {
-  background: var(--text-strong);
-  color: var(--surface);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 .task-list {
@@ -299,18 +320,22 @@ button {
   align-items: start;
   border-radius: 8px;
   padding: 16px;
+  background: var(--surface);
 }
 
 .task-item.done {
-  opacity: 0.64;
+  background: #f7fafc;
+  opacity: 0.72;
 }
 
 .task-item.overdue {
   border-color: var(--danger);
+  box-shadow: 0 16px 42px rgba(217, 45, 60, 0.1);
 }
 
 .task-item.soon {
   border-color: var(--warning);
+  box-shadow: 0 16px 42px rgba(213, 138, 0, 0.1);
 }
 
 .check-button {
@@ -376,18 +401,18 @@ button {
 }
 
 .priority.low {
-  background: #e7f6ee;
-  color: #14784f;
+  background: #e8f6ef;
+  color: #126b49;
 }
 
 .priority.medium {
-  background: #fff1d6;
-  color: #99620d;
+  background: #e9f2ff;
+  color: var(--accent-strong);
 }
 
 .priority.high {
-  background: #ffe2e0;
-  color: #bb2f2a;
+  background: #ffe8ea;
+  color: var(--brand-red);
 }
 
 .task-actions {
