@@ -211,9 +211,12 @@ export default function TodoApp() {
     <main className="app-shell">
       <section className="workspace">
         <header className="app-header">
-          <div>
-            <p className="eyebrow">Todo Reminder</p>
-            <h1>待办提醒清单</h1>
+          <div className="brand-lockup">
+            <img className="app-logo" src="/logo.png" alt="" aria-hidden="true" />
+            <div>
+              <p className="eyebrow">Todo Reminder</p>
+              <h1>多一事不如少一事不如无事</h1>
+            </div>
           </div>
           <div className="today">
             <span>今天</span>
