@@ -97,14 +97,6 @@ select:focus-visible {
   border-radius: 8px;
 }
 
-.workspace::before,
-.task-panel::before {
-  content: "";
-  display: block;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent) 0%, #0f172a 100%);
-}
-
 .workspace {
   align-self: start;
   padding: 20px 24px 24px;
